@@ -41,7 +41,7 @@ class AdsApiTest
     }
 
     "asked for advertisement with non-matching rules" should {
-      "return empty response" in {
+      "return empty ad id" in {
         when()
           .get("http://localhost:8080/ad?age=50&gender=Female").
           Then()
