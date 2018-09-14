@@ -21,7 +21,7 @@ object InMemoryAdStore extends AdStore {
 
 
   override def getById(id: String): Future[Option[Ad]] =
-    Future.successful(ads.find(_.id != id))
+    Future.successful(ads.find(_.id == id))
 
   override def getAll: Future[List[Ad]] =
     Future.successful(ads)
